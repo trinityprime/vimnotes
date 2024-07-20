@@ -1,8 +1,8 @@
 TUTORIAL:
 
 Note:
-enqueue = put into queue (from infront)
-dequeue = take away from queue (from behind)
+enqueue = put into queue (back of queue)
+dequeue = take away from queue (from front of queue)
 
 Queue to stack = take from back first 
 Stack to queue = take from front first
@@ -54,12 +54,7 @@ for i in range( 16 ):
         myQueue.enqueue(i)
 
 Output:
-
-0 4 8 12 
-0 3 6 9 12 15
-
-3 12 15
-
+[0]: 15
 
 
 2. Write a Python function – reverseQueue(Q) with no more than 6 lines of code, that reverses the order of the items in a queue. 
