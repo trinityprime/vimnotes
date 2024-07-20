@@ -1,0 +1,159 @@
+Call by Value 
+--------------
+- Uses immutable data types (int, string, bool, float)
+- Any modifications create a new object, leave original unchanged
+
+def modify_value(x):
+	x += 10
+	return x 
+
+a = 5
+new_value = modify_value(a)
+print(new_value) --> 10
+print(a) --> 5 (original value remains unchanged)
+
+
+Call by Reference
+------------------
+- Uses mutable data types (list, dict)
+- Any modification inside function will affect original object
+
+def modify_list(list):
+	list.append(4)
+	return list
+
+a = [1,2,3]
+modify_list(a)
+print(a) --> [1,2,3,4] (original list is modified)
+
+
+Call Stack
+----------
+- First in last out structure for function calls. Function inside a function
+
+
+Heap
+----
+- Shared memory space among function calls
+- Objects created during program's execution are stored here 
+
+
+QNS:
+----
+
+1 def pow2(num):
+2	result = num * num
+3	return result
+4
+5 def increment(num):
+6	result = num + 1
+7	return result
+8
+9   x = 10
+10  y = increment(x)
+11  z = pow2(y)
+12  print(z)
+
+Basically for function call stack, calling functions go on top, finalising variables go below (+ module go below)
+
+ONLY LIST FUNCTIONS WHEN QN ASK TO STOP AT A PARTICULAR LINE BTW
+
+
+Q1 Draw program call stack, when statement at line 10 is executed
+
+increment(10)
+-------
+<module>
+x = 10
+
+Q2 Draw program call stack, after line 10 is executed, before moving to line 11
+
+<module>
+x = 10
+y = 11
+
+Q3 Draw program call stack, when line 11 executed
+
+pow2(11)
+--------
+<module>
+x = 10
+y = 11
+
+Q4 Draw program call stack after line 11 executed, before moving to line 12
+
+<module>
+x = 10
+y = 11
+z = 121
+
+
+-------------------------------------------------------------------------------
+
+def fac(i)
+	if i < 2:
+	   return 1
+	else:
+	   return i * fac(i-1)
+
+result = fac(3)
+
+
+Q3
+
+fac(1)
+--------
+fac(2)
+--------
+fac(3)
+--------
+<module>
+
+-------------------------------------------------------------------------------
+
+1 def sum(x,y)
+2	return x + y
+3 a = 1
+4 b = 10
+5 c = sum(a,b)
+
+Q1 When PC = 3
+
+<module>
+a = 1
+
+Q2 When PC = 4
+
+<module>
+a = 1
+b = 10
+
+Q3 When PC = 5
+
+sum(1,10)
+--------
+<module>
+a = 1
+b = 10
+
+Q4 When PC = 2
+
+sum(1,10)
+return 1 + 10
+------
+<module>
+a = 1
+b = 10
+
+Q5 When PC = 5
+
+<module>
+a = 1
+b = 10
+c = 11
+
+--------------------------------------------------------------------
+
+
+
+

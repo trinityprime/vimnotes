@@ -1,0 +1,197 @@
+ITERABLES/ITERATORS
+-------------------
+mylist = [1,2,3]
+for i in mylist:
+   print(i)
+
+>>> 1 
+>>> 2
+>>> 3
+
+Basically, reading items one by one, stores values in memory
+However, takes up alot, storing alot can crash program
+
+
+GENERATORS
+----------
+def firstN(n)
+	num = 0
+	nums = []
+	while num < n
+		nums.append(num)
+		num += 1
+	return nums
+
+Why dont use this approach? HOARDS UP MEMORY, CRASHES!
+
+Instead, use yield! (Generators)
+
+def firstN(n)
+	num = 0
+	while num < n
+		yield num
+		num += 1
+
+
+Generators only iterate over once, generate values on the fly.
+Yield is kinda like return, except:
+- return terminates execution of the function --> function completes immediately, provides single result
+- yield pauses execution of the function --> function state is saved, can be resumed later
+
+
+QUESTIONS
+---------
+def nat_generator():
+    i = 0
+    while True:
+       yield i 
+       i = i + 1
+
+Q1 Write a function take(seq, n) which takes a sequence seq and the number n, return a list of the first n numbers from the seq
+
+
+def take(seq, n):
+	i = 0
+        result = []
+		for num in seq:
+			if i < n:
+				result.append(num)
+				i += 1
+			else: 
+				break
+		return result
+
+-- OR --  
+
+def take(seq, n):
+	result = []
+	for _ in range(n):
+		result.append(next(seq))
+	return result 
+
+
+Output:
+>>> take(nat_generator(), 10)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+
+Q2 Write a generator fib_generator that generates an infinite sequence of Fibonacci numbers. Then, implement a function take(seq, n) that takes a 
+(potentially infinite) sequence seq and the number n, and returns a list of the first n numbers from the sequence.
+
+def fib_generator():
+   a = 0
+   b = 1  
+   while True:
+	yield a 
+	a = b
+	b += a
+
+def take(seq, n):
+   result = []
+   num = 0
+	for i in seq:
+	   if num < n:
+		result.append(i)
+		num += 1
+	   else:
+		break
+	
+	return result
+
+
+>>> take(fib_generator(), 10)
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

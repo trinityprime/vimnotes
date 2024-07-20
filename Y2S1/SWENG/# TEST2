@@ -1,0 +1,1017 @@
+# TEST2
+## WEEK 03 - REQUIREMENT ANALYSIS
+### REQUIREMENTS
+
+`Requirements Development`
+• Understand, document business needs, process requirements for a system
+• Focus on what users want, and why
+
+This requires alot of input from customers
+
+
+`Requirements`
+• Feature that must be included in a proposed solution → satisfy customer expectation
+
+_Properties:
+• Unambiguous → clear documentation
+
+• Consistent → requirements are uniform, coherent, do not contradict
+
+• Exhaustive → clear & concise steps
+
+• Prioritised → Prioritise important features first, be realistic with given deadline
+
+• Verifiable → Requirement must be verifiable on how features developed will satisfy user
+
+
+
+### KEY ACTIVITIES
+
+`Prioritise Requirements`
+• Manage users’ needs according to:
+   • urgency
+   • complexity
+   • estimated effort needed
+
+• Balance between limited resources & users needs → helps prevent scope creep
+
+Scope creep = more and more requirements added as development process goes on
+→ leads to cost overruns, project delays [slippage]
+
+HOW??
+• Evaluate requirement with user until acceptable requirement list is developed
+• Evaluate all possibilities in design and implementation of system
+• Validate accuracy & correctness in requirements 
+• Iterative process [constantly built upon]
+
+
+
+### FUNCTIONAL & NON-FUNCTIONAL REQUIREMENTS
+
+`Functional:`
+• Features that the System MUST have (what system must perform)
+• Typically to support business process
+
+Eg. ATM function
+1. ATM validates inserted card
+2. ATM disperses money
+3. ATM alerts staff if low on money
+_Basically front-end stuff (what users “see”)
+
+`NON-Functional:`
+• Constraints that the System MUST meet (expected from system)
+
+Eg. ATM function
+1. System required to support 1000 concurrent users
+2. Must use Oracle database
+_Basically back-end stuff (what users dont “see”)
+
+More examples:
+• ATM written in C++ → development constraint
+• ATM 256bit encryption → security constraint
+• ATM validates PIN in 0.5 secs → performance characteristic 
+
+
+### TECHNIQUES FOR REQUIREMENT GATHERING
+
+• Questioning, observing, researching, modelling
+• Good questions initiate process
+
+Question themes:
+• What are the business processes?
+• How are they performed?
+• What info is required?
+
+`Interview Users & Stakeholders`
+• Most widely used fact-finding technique
+• Open & Closed-ended questions
+
+_Pros:
+• Effective way to understand business functions & rules
+
+_Cons:
+• Time-consuming 
+
+_USE WHEN REQUIRING IN-DEPTH INFO ON A NEW/EXISTING SYSTEM
+
+`Distribute & Collect Questionnaires`
+• Close-ended questions (get direct response)
+• Opinion questions (agree/disagree type questions)
+• Explanation of procedure/problem
+
+_Pros:
+• Cost-effective for large groups 
+• Supports distributed geographical location
+
+_Cons:
+• Hard to construct good questions & constraints 
+
+_USE WHEN NEED LARGE AMOUNTS OF DATA FROM DIFFERENT LOCATIONS 
+
+`Review Inputs, Outputs, & Documentations`
+• External Info
+   ◦ Industry journals, magazines
+   ◦ → report on “best practices” 
+• Internal Info 
+   ◦ existing business documents within org.
+   ◦ → gets basic understanding of process, serves as visual aid
+
+_Pros:
+• Analysts get understanding of org. before meeting users
+
+_Cons:
+• Documents may be outdated/not match actual operations
+
+
+_USE DURING INITIAL STAGES OF INVESTIGATION, WHEN ANALYST IS UNFAMILIAR WITH ORG.
+
+`Observe & Document Business Process`
+• Diagram all information gathered into Workflows
+   ◦ Create activity diagrams
+   ◦ → identify:
+      ◦ activities
+      ◦ relationships between activites
+      ◦ personnel responsible for activities
+
+_Pros:
+• First-hand experience on system operations
+• Validation of info & business performance
+
+_Cons:
+• Possible issue with information confidentiality 
+
+_USE WHEN GATHERING QUANTITATIVE DATA ABOUT BUSINESS & VALIDATING CONFLICTING INFO PROVIDED
+
+`Building Effective Prototypes`
+• Initial clone of real production system (limited features)
+
+Prototypes:
+• Discovery Prototype
+  → model created to verify concept and discarded
+
+• Evolving Prototype
+  → working model that grows, may be part of system
+
+• Mock-up 
+  → example of final product for viewing only (cannot execute)
+
+_Pros:
+• Cost efficent
+• Can discover problems earlier with greater user involvement
+
+_Cons:
+• Alot of time spent on prototype compared to analysis
+
+_USE WHEN PROJECTS HAVE HIGH INTERACTIVITY WITH USERS
+
+`Research Vendor Solution`
+• Other companies (software firms) may have already packaged solutions for a business need
+
+→ take advantage of existing solutions → avoid costly mistakes, save time and money
+
+_Pros:
+• Platform to learn from past experiences
+• Cheaper, less risky to buy a solution rather than build it
+
+_Cons:
+• Bought solution may lack user requirements needed, find out late = GG
+
+_USE WHEN FEATURES TO SUPPORT BUSINESS ARE NON-SPECIFIC
+
+
+
+
+
+
+
+
+
+## WEEK 04 - UML ESSENTIALS
+### PURPOSES OF MODELS
+
+• Support communication among stakeholders of a project
+• Describe different parts of a problem and/or solution
+• Showcase levels of system details
+
+### WHAT IS UML
+
+• Standard language for writing software blueprints
+• Visualise, specify, construct, document artefacts of system
+
+`How can UML be used??`
+• Primarily for software-intensive systems
+  → banking & financial services
+  → transportation
+  → retail
+
+### USE CASE DIAGRAM RELATIONSHIPS
+
+`What is Use Case Diagram??`
+• Functional system/software requirements for a software program
+• Specify expected behaviour of software, not how to make it happen
+• Design from end-user’s perspective
+• Simple, summarises relationships between use cases, actors, systems
+
+Purpose:
+• Specify context
+• Capture requirements
+• Drive implementation, generate test cases
+
+`Elements of Use Case Diagram`
+
+System: (rectangle)
+• Encompasses use cases and relationships
+• System boundary is potentially the entire system as defined in requirements document
+
+Actor: (stickman)
+• Someone/something using the system to achieve a goal
+• Placed outside the system
+• Triggers use cases
+• Gives inputs, triggers outputs
+
+Use Case: (oval)
+• System function
+• Each actor must be linked to a use case, NOT vice versa
+
+Relationships: (arrows/lines)
+• Connect an actor to a use case by a solid link → participation of an actor in a use case 
+
+`<<include>>`
+• When use case uses functionality of another use case
+• Basically parent use case is connected at the base of the arrow
+• And the tip of the arrow points to the child use case
+
+Eg. Borrow Books ——<<include>>————> Check Reserved Books (dotted lines)
+               L——<<include>>————> Check Fine
+
+_WHEN BASE USE CASE IS EXECUTED, INCLUDED USE CASE IS EXECUTED EVERYTIME
+
+
+`<<extend>>`
+• Relationship from child use case to parent use case when there is additional behaviour that should be added, possibly conditionally
+
+Eg. Request a Book <————<<extend>>—— Search
+
+_WHEN BASE USE CASE IS EXECUTED, EXTENDED USE CASE IS EXECUTED SOMETIMES
+
+
+`Generalisation `(Inheritance)
+• Parent child relationship between use cases
+• Child use case is an enhancement of the parent
+
+Eg.         Search
+              ^
+              |
+         ————————————
+        |            |
+    Search by ..  Search by ..
+
+
+`Association Link`
+• Use case diagram illustrates a set of use cases for a system
+• Eg. relationship between actors and use cases
+
+Eg. Actor ————— Use Case
+
+
+
+
+### CONSTRUCT, INTERPRET USE CASE DIAGRAMS
+
+Well Structured UCD:
+• Communicate 1 aspect of a system’s static use case view
+• Contains only essential use case and actors
+
+Drawing UCD:
+• Spread out elements
+• Organise behaviours and roles close to each other
+• Use color as visual cues
+• Do not have too many relationships
+
+Developing Use Case:
+• Iterative process!!
+1. Identify actors and roles
+2. Identify system capabilities
+3. Identify use cases
+4. Actor and use case relationships (uncover new system capabilities)
+5. Map relationship lines to actors (uncover new actors)
+6. Iteratively refine model
+
+`Tips`:
+• Structure UCD from perspective of actors
+• Be simple and at the highest view possible 
+• Foucs on “what” and NOT “how”
+
+
+### USE CASE DESCRIPTION
+
+• Outlines process flow of the use case from a user’s POV
+• Each use case = sequence of steps to achieve a user’s goal
+
+`Components:`
+Use case Name:
+• Name of use case
+
+Use case ID:
+• Unique identifier, so that functional requirements can be tracked
+
+Use case Description:
+• High-level description of sequence of actions
+• Reason & outcome of executing use case
+• Include input data required, as rules, constraints
+
+Primary Actor:
+• Actors that initiates use of system
+
+Secondary Actor:
+• Actors that support a use case after triggered (reactionary/participator)
+
+Preconditions:
+• List anything that must take place before use case can be started
+
+Postconditions:
+• List state of system at the end of use case execution
+
+Main Flow:
+• List user actions and system responses given normal conditions
+
+Alternative Flows:
+• Document other scenarios that can take place due to errors
+• Each flow must have a scenario name
+• List user actions and system responses for each alt. scenario
+
+
+## WEEK 05 - AGILE - SCRUM
+### What is Scrum?
+
+• Lightweight Framework → generates value through adaptive solutions for complex problems
+• Small independent teams
+• Structure of roles, meetings, rules, artefacts
+
+
+### Essence of Scrum (Scrum Framework)
+
+`3 Roles, 3 Artefacts, 5 Events`
+
+Roles: 
+• Scrum Master
+• Product Owner
+• Development Team
+
+Artefacts:
+• Product Backlog
+• Sprint Backlog
+• Increment
+
+Events:
+• Sprint
+• Sprint Retrospective
+• Sprint Review
+• Sprint Planning
+• Daily Scrum
+
+`Sprint`:
+• One iteration through the design/code/test/deploy cycle
+• Every sprint should have a goal
+• Usually 2 weeks duration
+
+`Scrum Team`:
+• 1 PO, 1 SM, developers. <=10 ppl
+• Self-organizing, cross-functional
+• Everyone needs to take a feature from idea → implementation
+
+_Everyone is accountable for creating a useful increment each sprint
+
+`Product Owner`:
+• Clear vision and goal for product
+• Represents interest of stakeholders
+• Uses work of dev team → maximise value of Product
+• Owns Product Backlog 
+   • Creation
+   • Management
+   • Prioritization
+
+`Scrum Master`:
+• Focuses on needs of team members and stakeholders
+• Teaches organization and team all about Scrum process
+  → devs to perform at the highest level
+  → prevents impediments
+  → facilites scrum events
+
+`Development Team`:
+• 5-9 pros responsible for the working product at end of each sprint
+• Flat structure - everyone is dev title, no sub-team
+• Owns Sprint backlog, decides how much is realistic for each sprint
+• Adheres to DoD
+
+`Scrum Artefacts`:
+• Product Backlog, Sprint Backlog, Increment
+• Maximize transparency of key info
+
+Product Backlog:
+• Ordered list of expected product features/functions
+• Single source of requirements for any changes to be made to product
+• PO is responsible for it
+
+Sprint Backlog:
+• PBI, broken down into tasks
+• Tasks are estimated in 1-16 hours. >16 hours = broken down
+• Devs sign up for the tasks, NOT ASSIGNED
+• Estimated remaining work is updated daily 
+
+Increment:
+• At the end of each sprint, “Done” items are integrated and tested with increments from other sprints 
+  → Potentially Shippable Product
+
+• Product Increment = potentially releasable state 
+  → PO could release it with the collection of completed features 
+
+Definition of Done:
+• Specifies characteristics & standards and Increment needs to meet
+• Commitment by devs for the Increment
+• Once DoD is met, Increment is done, can be delievered.
+
+
+
+
+
+### Scrum values & Theory
+
+Scrum Values:
+• Courage 
+• Focus
+• Commitment
+• Respect
+• Openness
+
+`Scrum Theory` - Empirical Process Control
+
+Think of something that might work → Try it for a sprint → Inspect & Adapt
+
+Optimises predictability and control risk
+
+- Iterative process!!
+
+
+## WEEK 06 - PRODUCT BACKLOG, USER STORIES, ACCEPTANCE CRITERIA
+### Product Backlog Items (PBI)
+
+• Features → As a ____ I want to ____ so that ____
+• Defects → Fix defect #256
+• Technical Work → Move to latest version of [software]
+• Knowledge Acquisition → Testing of prototype, running of tests
+
+Characteristics of Good PB:
+• Detailed appropriately 
+  → The more urgent/detailed, the higher up on the backlog
+  → Larger, less detailed lower on backlog
+
+• Emergent
+  → PB continuously updates based on stream of information
+
+• Estimated
+  → Each PBI has a size estimate to effort required to develop item
+  → helps determine PBI priority
+
+• Prioritized
+  → Useful to prioritize near-term items for next few sprints
+
+`PB Grooming (refinement)`
+• Creating and refining (adding details to PBI)
+• Estimating PBI
+• Prioritizing PBI
+
+_10% sprint time spent on refinement
+
+`MoSCoW Prioritization Technique`
+M — MUST HAVE → top priority, essential
+S — SHOULD HAVE → second-priority, important but not crucial
+C — COULD HAVE → third-priortiy, nice to have
+W — WONT HAVE → excluded, not essential
+
+`Granularity of PBI`
+            Use Cases  → Something epics have in common (same func. area)
+            /       \
+        Epics      Epics → Decomposed into stories in PB
+          /           \
+    User Stories   User Stories → smallest units of user functionality
+        /  \          / \
+       Tasks         Tasks → internal steps (by devs) to implement user story
+
+### User Stories
+
+• Short simple description of a feature from perspective of cust.
+• Describe how feature would bring value back to cust.
+• Simple, not detailed
+
+`Format`:
+As a [persona], I want to [action], so that [benefit]
+
+`INVEST Acroynym`
+• Independent →  stories should be independent
+
+• Negotiable → used as a collaboration tool (captures essence of goal)
+
+• Valuable → result adding value to cust. & org.
+
+• Estimable → able to be properly selected and prioritized
+
+• Small → can be completed within a sprint
+
+• Testable → be testable (write a high-level acceptance criteria)
+
+`3 Cs APPROACh to form User Story`
+• Card
+  → represent purpose of user story, written on post-it notes
+
+• Conversation 
+  → details behind user stories,
+  → shared context that cannot be achieved through formal documentation
+
+• Confirmation
+  → represent acceptance criteria of user story (confirm value is delivered)
+
+`Size of User Stories`
+• 1-2-3-4
+  → 1-2 Devs can get PBI done in 3-4 days
+  → 6-10 PBI can fit in a 2-week sprint
+
+
+
+### User Stories: Acceptance Criteria
+
+• Conditions that have to be fulfilled so that the story is done
+• Made clear for tester to determine a PASS or FAIL
+  → no partial acceptance (conditional pass)
+
+Format:
+
+(Gherkin Syntax)
+Scenario → description of process
+Given → beginning stage of scenario
+When → specific action user makes
+Then → outcome of “When” action
+
+(Verification List/Checklist Template)
+• Define list of pass/fail statements that functionality must meet 
+
+
+Includes:
+• Functional Criteria
+  → identify specific functions that must be in place 
+
+• Non-functional Criteria
+  → identify specific non-functional conditions eg. design elements
+
+`Characteristics of Good Acceptance Criteria`:
+• State an intent, not a process
+  → eg. user can choose an account, NOT user can select account from drop-dwn
+• Is independent of implementation 
+  → eg. will work regardless of web/mobile
+• Relatively high level, not very detailed
+
+
+
+
+## WEEK 07 - REFINEMENT, ESTIMATION, SPRINT PLANNING
+### Backlog Refinement
+
+• When PO collabs with Dev Team to prioritize PBI & add details & estimates
+• Held before sprint planning
+
+`Why Backlog Refinement?`
+• Ensures items are relevant
+• Ensures all members are aware on item priorities
+  → help reconsider priorities, recap on all items
+
+`Benefits`
+Solves:
+• Poor code quality
+• Meaningless work
+• Demotivated team
+• Toxic team culture
+
+`How to implement?`
+When → should happen once each sprint
+How long? → <=10% time of dev team’s time
+
+PO should:
+• Review PBI
+• Remove irrelevant items
+• Create new items (where necessary)
+• Re-assess priorities
+
+`Common mistakes`
+• PO does refinement himself
+• Non-relevant discussions
+• PO collects only feedback from selected members 
+
+
+### Storypoint Estimation
+
+• Process of estimating effort a PBI will require, compared to other PBIs
+• Helps devs understand difficulty of PBI
+• Storypoints distill multiple factors into 1 value
+  → devs discuss effort, not hours
+
+`Estimate Relative Size: Story Point`
+• Size = Effort + Complexity + Uncertainty
+• Whole Dev Team will do estimates together
+
+`Estimation Techniques:`
+
+T-shirt Sizing:
+• Uses t-shirt sizes to represent effort (S,M,L,XL)
+• Team categorizes PBIs into different sizes
+
+Steps
+1. Decide on sizes
+2. Align on what each size represents
+3. Decide on who assigned sizes
+4. Assign sizes to each PBI
+5. Track t-shirt sizes using a work management tool
+6. Use sizes to gauge workload
+
+Fibonacci:
+• 1,2,3,5,8,13,21
+• Each number is assigned to PBI
+• Clear distinction between each number
+
+Planning Poker:
+• Consensus based (NO majority wins)
+
+Steps
+→ Read PBI
+→ Show card with value
+→ Highest and Lowest value explain 
+→ Show cards again 
+→ repeat <=3 times 
+•  1 number is picked for each PBI
+
+
+### Sprint Planning
+
+• 2hrs x num. weeks of a Sprint 
+
+What work can be done:
+• PO presents PBI → broken down into tasks → estimated in hours
+
+How work will get done:
+• Dev Team decides how it would build the “Done” PI
+  → they do the planning & design, may invite other ppl for advice
+
+Input = PB, Product Increment, DoD, projected team capacity
+Output = Sprint Goal, Sprint Backlog
+
+Sprint Goal:
+• Commitment of the Sprint Backlog, single objective of sprint
+  → purpose
+  → creates value
+  → specifies an outcome
+
+
+### Definition of Done
+
+• Increment must meet DoD to be “Done”
+• Shared understanding of standards to meet 
+
+`Importance`:
+• Boosts quality
+• Minimizes risk
+• Measures progress
+
+Steps:
+• Establish criteria
+• Build completion checklist
+• Revise, update DoD
+
+`DoD VS Acceptance Criteria`
+DoD:
+• Set of high-level critera to determine is PI is complete
+  → eg. all documentation is written and updated
+
+Acceptance Criteria:
+• Low-level conditions, applying to only specific user stories/features
+• Whether user story is acceptable to a customer
+  → eg. link to user documentation is accessible from menu
+
+
+
+## WEEK 08 - SCRUM PROCESSES
+### Daily Scrum
+
+• 15 min daily stand-up meeting between Scrum Team
+
+• Each members answers:
+  → what did I contribute yesterday
+  → what will I do today to help reach Sprint Goal
+  → are there any issues that prevent the team from reaching goal?
+
+`Benefits:`
+• Optimise team collaboration, reinforces focus on Sprint Backlog & Goal
+• Improves communication, decision-making
+
+
+### Sprint Review
+
+• 1hr x num. weeks of a sprint held at end of each sprint
+• Focus on outcome of current sprint 
+• Demonstrate what has been accomplished
+
+`Discuss:`
+• What is the current state of the Product
+• What should be added to the Product/improved in future sprints
+
+• At end of sprint, itens that meet DoD will be considered part of increment
+• Else, go back into the PB
+
+
+### Sprint Retrospective
+
+• 45 mins x num. of weeks of a sprint held at end of sprint AFTER review
+
+`Discussion:`
+• How sprint went with regard to people, process, tools
+• Identify items that went well, potential improvements
+• Creation of action plan to implement improvements in Scrum Team
+
+`Steps:`
+• Allow team to remain blameless
+• Balance negative with the positive
+• Act on the plans
+
+
+### Time distribution
+
+  ———————————————————————————————
+ |` 4week` |` 3week` |` 2week` |` 1week` |
+ |———————————————————————————————| 
+ | 8hr   | 6hr   | 4hr   | 2hr   | → sprint planning (2hrs/week)
+ |———————————————————————————————|
+ | 15min | 15min | 15min | 15min | → daily scrums (15min daily)
+ |———————————————————————————————|
+ | 4hr   | 3hr   | 2hr   | 1hr   | → sprint review (1hr/week)
+ |———————————————————————————————| 
+ | 3hr   | 2.3hr | 1.5hr | .75hr | → sprint retro (45min/week)
+  ———————————————————————————————
+
+
+### Burn-down Charts & Velocity
+
+• Great to show state of project
+  → how much work has been done
+  → how much work is left
+
+• Basically helps team see their progress
+  → completing user stories/tasks during sprint
+
+
+Burn-down Chart:
+`Types:`
+• Project/product/release level → compare story points & num. sprints
+• Sprint level → compare hours remaining and num. days of sprint
+
+`Late Acceptance:`
+• Absent PO → team cannot clarify matters/acceptwork
+• Proxy PO → PO is not onsite with rest of team
+
+_Basically no work is done!!
+
+`Slow Progress:`
+• Ambitious team → cmi
+• Submissive team → say can do but cannot do 
+• Capacity issues → lesser manpower
+• Change of priorities → need address critical issue
+• Outside dependencies → unforseeable issues
+
+_Work is done, but not fast enough!!
+
+
+`Early Finish:`
+• Overly cautious team → overestimated effort required
+• Planned for slack time → included buffer time to iron out bugs
+
+_Work is done earlier than planned!!
+
+`Scope Increase:`
+• Refinement failure → refining tasks into increment takes longer
+• Dynamic Sprint Backlog → urgent tasks pop up
+
+_Work is done, but problems keep popping up (sideways lightningbolt graph)
+
+Velocity:
+• How many story points a team completes per sprint on average
+• Basically amount of work done per sprint
+• Calculate using avg. velocity over >=3 sprints
+
+`Note:`
+• No good or bad velocity
+• Once got stable velocity, can inform stakeholders
+  → how long to complete PB
+  → how much able to complete given a duration
+
+
+
+## WEEK 011 - Lean Kanban Extreme Programming
+### Lean
+Core idea:
+• Maximise customer value, minimize waste
+• A lean org. → understands customer value, focus its key processes to increse it.
+• Optimize the Whole
+
+Core Principles:
+• Value → define what it means to cust, and how to align processes to deliver it
+• Value Stream → Map steps involved in delivering value, from concept to cust
+• Flow → Smooth flow in value stream, eliminate waste
+• Pull → Customer demand drives production, avoid overproduction
+• Perfection → iterative process, strive for zero waste and efficency
+
+Software Development Principles:
+• Eliminate waste
+• Build Quality In
+• Create Knowledge
+• Defer Commitment
+• Deliver Fast
+• Respect People
+• Optimize the Whole
+
+Lean Tools & Techniques:
+• Value Stream Mapping (VSM) → visual map of the value stream, identify bottleneck and waste
+• 5S Steps → Sort, Set in Order, Shine, Standardize, Sustain
+• Kaizen → continuous improvement through small changes
+• Poka-Yoke → design processes and tools to prevent errors from occurring
+• Just-in-Time (JIT) → on demand production of goods & services 
+
+### Kanban
+
+Benefits:
+• Improve Productivity, Predictability
+• Increase customer satisfaction
+• Reduce delivery times
+• Move towards a constantly improving org.
+• More functional working relationships across org.
+
+`When to use Kanban?`
+• Uneven flow of work
+   ◦ Large batch transfers
+   ◦ Unplanned requests
+ 
+• Deferred commitment is desireable
+   ◦ Priorities change
+   ◦ Frequent replanning
+   ◦ High abandonment
+  
+• System/workers overburdened
+   ◦ Too much WIP
+   ◦ Stressed workers
+   ◦
+Core Practices:
+• Visualise daily workflow
+   ◦ see items in context of each other
+
+• Limit amount of WIP
+   ◦ helps balance flow-based approach
+   ◦ teams dont commit too much work 
+
+• Enhance Flow
+   ◦ once a task is finished,
+   ◦ next highest is pulled from backlog after sprint plan meeting
+ 
+                         `SCRUM VS KANBAN`
+                  User Stories — Work Items (user stories)
+Roles (PO, Scrum Master, Team) — Use existing roles
+                      Velocity — Cycle Time
+      Fixed Iterations/Sprints — Continuous Flow
+
+
+### Extreme Programming (XP)
+
+• Customer emphasises most useful features of given product
+  → devs upgrade on this feedback while testing new innovations every few weeks
+• Works best among small teams of experienced devs, with proven track record
+
+Extreme Programming Values:
+• Communication → Everyone works jointly at every stage
+• Simplicity → Devs write simple code (save time and effort)
+• Feedback → Devs deliver software frequently, get feedback, then improve
+• Respect → Devs assigned to a project contributes to a common goal
+• Courage → Devs evaluate own results, ready to respond to changes, do not make excuses
+
+_Pros:
+• Stable system
+• Clear Code
+• Fast MVP delivery
+
+_Cons:
+• Unclear estimates
+• Time waste
+• Not enough documentation
+
+
+`When to use XP?`
+• Small team → highly collaborative, <10ppl
+• In constant contact with customers → incorporate cust. req.
+• Have adaptable devs that embrace change 
+• Well versed in technical aspect of coding
+
+
+`XP Life Cycle`
+• Pull unfinished work from user stories
+• Prioritize most important items
+• Begin iterative planning
+• Incorporate honest planning
+• Communicate with all stakeholders
+• Release work, get feedback
+• Return to iterative planning stage, repeat!!
+
+
+`XP Practices`
+
+Feedback: 
+• `Test-driven Development`
+• The Planning Game
+• On-site Customer
+• `Pair Programming`
+
+Continual Process:
+• `Continous Integration`
+• `Code Refractoring`
+• Small Releases
+
+Code Understanding:
+• Simple Design
+• Collective Code Ownership
+• System Metaphor
+• Code Standards
+
+Work Conditions:
+• 40-Hour week!!
+
+—————————————————————————————
+
+`Test-driven Development`
+• Writing an automated unit test before the code itself
+• Every piece of code must pass the test to be released
+  → devs can use immediate feedback to produce reliable software
+
+`Pair Programming`
+• In XP, two programmers sit side by side at the same computer
+• 1st dev focuses on coding, 2nd dev reviews code, basically QA
+• All production code is reviewed by >=1 other programmer
+  → better design, better code, higher quality software
+
+`Code Refractoring`
+• Continuously improve code
+• Remove redundancy, increase code coherency
+• Keep code clean, simple → can easily understand and modify
+
+`Continuous Integration`
+• System is fully integrated at all times, and build multiple times a day
+  → devs can catch and fix integration issues fast
+• Higher levels of throughput
+• More stable software
+• Higher quality software
+
+
+
+
+
+
+
+
+
+
+
+
+#WEEK 012 - DevOps
+### What is DevOps?
+
+• integrates, automates work of software dev. (Dev), and IT operations (Ops)
+  → improves and shortens the systems development life cycle.
+
+Key Principles:
+• Encourage Collab.
+• Decision based on Data Analysis 
+• Customer-Centric action
+• Constant Improvement
+• Responsibility Throughout Lifecycle
+• Automate what you can
+• Learn from Failure
+
+
+
+### DevOps Phases & Tools
+
+
+
+
+### DevOps Processes
+
+#WEEK 014 - SOFTWARE TESTING FUNDEMENTALS
+### 
+
+
+
+
+
+
