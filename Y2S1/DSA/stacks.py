@@ -112,10 +112,60 @@ Q3 Trace, evaluate prefix expression / + - 6 2 * 3 4 2 (do backwards for prefix)
 Ans: 8
 
 
+Q4. V * W * 8 + Y - Z
+
+Prefix
+
+(V * W) * 8 + Y - Z
+((((V * W) * 8) + Y) - Z)
+( - ( + ( * ( * V W) 8) Y) Z)
+
+- + * * V W 8 Y Z
+
+Postfix
+
+((((V * W) * 8) + Y) - Z)
+((((V W *) 8 *) Y + ) Z - )
+
+V W * 8 * Y + Z -
 
 
+Q5 A / B * C - D + E
+
+Prefix
+
+((((A / B) * C) - D) + E)
+
+(+ (- ( * (/ A B) C) D) E)
+
++ - * / A B C D E
+
+Postfix
+
+((((A / B) * C) - D) + E)
+((((A B /) C *) D -) E +)
+
+A B / C * D - E +
 
 
+Q6 Trace, evaluate postfix expression 15 3 / 5 10 - / 100 ^
+
+          10
+    3   5  5 -5 100
+15 15 5 5  5  5  -1 1
+
+Ans: 1
+
+
+Q7 Trace, evaluate prefix expression + / * - 32 5 5 6 21
+            
+             32
+          5   5  27  
+       5  5   5   5  135  
+    6  6  6   6   6    6  22.5 
+21 21 21 21  21  21   21    21 43.5   
+
+Ans: 43.5
 
 
 
