@@ -998,16 +998,66 @@ Key Principles:
 • Automate what you can
 • Learn from Failure
 
+`Business Benefits`:
+• Reduced time taken to create & deliver software
+• Reduced complexity
+• Increased collab. with dev & operations team 
+
+                                             DevOps VS Agile:
+
+Agility:     Agility in Both Development & Operations | Agility in only development
+
+Processes: Continuous Integration/Continuous Delivery | Scrum, Kanban
+
+Key Focus Area:       Timeliness & Quality equal prio | Timeliness main prio
+
+Source of Feedback:             Feedback is from self | Feedback is from stakeholders (customers)
 
 
 ### DevOps Phases & Tools
 
+• Divided into 8 phases
+
+Plan: Business owners & dev team discuss goals & create plan
+
+Code: Devs design, code application —> use tools (Git) to store code
+
+Build: Build tools (Maven) take code from repositories —> combine them to build complete app
+
+Test: Application tested using automation testing tools (Selenium) —> ensure quality
+
+Integrate: New features integrated automatically to existing codebase
+
+Deploy: Application packaged, deployed from development to production server
+
+Operate: Ops team performing activities (configuring servers)
+
+Monitor: Identify specific issues —> understand impact on end-users
 
 
 
 ### DevOps Processes
 
-#WEEK 014 - SOFTWARE TESTING FUNDEMENTALS
+`DevOps Framework`: CALMS
+• Culture —> People and process first
+
+• Automation —> Use tools to control systems 
+
+• Lean —> eliminate low-value activities
+
+• Measurements —> relevant metrics to improve 
+
+• Sharing —> feedback 
+
+
+
+
+
+
+
+
+
+# WEEK 014 - SOFTWARE TESTING FUNDEMENTALS
 ### 
 
 
