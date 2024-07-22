@@ -1049,11 +1049,69 @@ Monitor: Identify specific issues —> understand impact on end-users
 
 • Sharing —> feedback 
 
+`DevOps Pipeline`:
+• Set of automated processes and tools 
+  —> allow devs & ops team to work together cohesively
 
+• Includes build automation, automation testing, validation, reporting
 
+Components
+• CI/CD 
+• Continuous feedback
+• Continuous operations
 
+`CI/CD/CD`:
 
+Continuous Integration 
+• Automatically build & unit test entire app
+• Ideally whenever code is uploaded to main repository
 
+Continuous Delivery
+• Deploy every change to prod like environment 
+• Perform automated integration & acceptance testing 
+
+Continuous Deployment
+• Every change goes through automated testing —> deployed automatically to prod
+
+Code   Build   Integrate   Release   Deploy
+
+—————————————→ Continuous Integration
+
+——————————————————————————> Continuous Delivery
+
+———————————————————————————————————→ Continuous Deployment
+
+How to make CI possible:
+• Devs integrate all their work into trunk daily 
+• Automated tests are run before and after merge —> ensure no regressions are introducted
+• If tests fail —> fixed immediately 
+
+Two main difficulties
+• Need to break up large features into smaller steps in order to integrate into trunk
+• Creating automated unit tests is difficult
+
+Continuous Delivery:
+• Ability to get changes into prod safely & quickly in a sustainable way 
+• Goal is to make deployments routine —> done on demand
+
+Principles
+• Build quality in
+• Work in small batches
+• Computers do automation, people solve problems
+
+Continuous Testing:
+1. Unit Testing
+2. Code Hygiene
+3. Integration testing
+4. TDD, BDD, ATDD
+Continuous Testing:
+1. Unit Testing
+2. Code Hygiene
+3. Integration testing
+4. TDD, BDD, ATDD
+5. Infastructure Testing
+6. Performance Testing
+7. Security Testing
 
 
 
