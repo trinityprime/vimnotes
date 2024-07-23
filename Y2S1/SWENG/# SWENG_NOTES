@@ -983,7 +983,7 @@ Work Conditions:
 
 
 
-#WEEK 012 - DevOps
+## WEEK 012 - DevOps
 ### What is DevOps?
 
 • integrates, automates work of software dev. (Dev), and IT operations (Ops)
@@ -1113,7 +1113,7 @@ Continuous Testing:
 6. Performance Testing
 7. Security Testing
 
-# WEEK 013 - Git & Github Version Control
+## WEEK 013 - Git & Github Version Control
 ### Why Version Control
 
 1. Enforce discipline
@@ -1162,5 +1162,78 @@ Version Control System:
 
 
 Workflow:
-• Working directory, Staging Area, Local Repository 
+• Working directory —> holds actual version of files 
+• Staging Area —> after changes are made, moved to staging area (git add)
+• Local Repository —> changes are saved to local repo (git commit)
+
+
+
+## WEEK 014 - Software Testing Fundamentals
+### Fundamentals of Testing
+
+
+
+### Types of Testing
+
+Testing Levels:
+• Unit Test
+• Integration Test
+• System Test
+• Acceptance Test
+
+
+`Unit Testing`:
+• Testing on single component of a system
+eg. function in a C++ program
+
+Focus
+• Verify components developed 
+• Generally using White Box testing
+
+
+`Integration Testing`:
+• Basically check whether >= 2 units are properly integrated 
+
+Focus
+• Need to re-run unit testing for modules if any are edited
+• Generally using Black Box testing
+
+
+`System Testing`:
+• Testing the system, as a whole, in iterations 
+
+Focus
+• Verify that system meets functional & non-functional requirements
+• System test looks at system functions from perspective of customer before User Acceptance Testing
+
+Note: Everytime changes are made, regression testing checks 
+      —> system works as normal after changes made
+      —> expected result is produced
+      —> no new bugs introduced
+
+
+Non-functional testing 
+
+• Performance
+   1. Speed, stability
+   2. Load —> app behaviour under normal and heavy load
+   3. Stress —> app behaviour beyond normal & peak load
+
+• Interoperability
+• Hardware testing
+• Security Testing
+
+
+
+
+
+
+
+
+
+
+
+### V Model of Software Testing in SDLC
+
+
 
