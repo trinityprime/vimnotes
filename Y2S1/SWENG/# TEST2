@@ -1113,13 +1113,54 @@ Continuous Testing:
 6. Performance Testing
 7. Security Testing
 
+# WEEK 013 - Git & Github Version Control
+### Why Version Control
+
+1. Enforce discipline
+2. Archive versions
+3. Maintain historical information
+4. Enable collaboration
+5. Recover from accidental deletions/edits
+6. Conserve disk space 
 
 
-# WEEK 014 - SOFTWARE TESTING FUNDEMENTALS
-### 
+### Benefits of Version Control
+
+• Easy to keep track of projects, collaborative
+• Can view history, review other ppl code
+
+For personal:
+• Can navigate across many versions of files
+• Online backup
+
+For collaborative:
+• Can assign tasks to other ppl 
+• Can ask ppl to review ur code
+
+### Commands
+
+git init
+git add <file>
+git status
+git commit -m “message”
+git push
+git pull
+git clone <link>
+git rm —cached <file>
+git branch <branchname>
+git merge <branch>
+git remote add <name> <link>
+git push -u origin <branch>
 
 
+### Git VCS & Workflow
+
+Version Control System:
+• Basically everyone can clone a repo, to maintain an identical version on their machine
+• Can commit & update their repo 
+• Then to update their local repo with main repo, they can pull and push
 
 
-
+Workflow:
+• Working directory, Staging Area, Local Repository 
 
