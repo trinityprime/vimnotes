@@ -1171,6 +1171,55 @@ Workflow:
 ## WEEK 014 - Software Testing Fundamentals
 ### Fundamentals of Testing
 
+• Testing principles
+   ◦ Testing shows presence of bugs; exhaustive testing is impossible
+   ◦ Early testing
+
+• Testing activities
+   ◦ Design test cases 
+   ◦ Carry out testing & reporting
+
+`Objectives`:
+
+Verification
+• Ensuring software meets specifications
+• Building the “software right”
+
+Validation 
+• Confirm software meets users/business intended environment
+• Building the “right software”
+
+Defect Detection & Elimination 
+• Variance between expected & actual result
+
+
+`Best Practices`:
+• Document test cases & results
+• Test early, cost effective
+• Have right attitude 
+
+
+Seven Principles:
+1. Exhaustive testing is impossible
+   —> Focus on what to test based on risk & priorities
+
+2. Defect clustering 
+   —> Identify target areas with large amount of defects
+
+3. Pesticide paradox 
+   —> Use variety of tests & techniques
+
+4. Testing shows presence of bugs
+   —> Testing doesn’t confirm error free software
+
+5. Absence of errors fallacy 
+   —> Always assume software has errors 
+
+6. Early testing 
+   —> Test earlier, more cost effective to correct defects
+
+7. Testing is context dependent 
+   —> Different testing is needed for different circumstances
 
 
 ### Types of Testing
@@ -1224,6 +1273,158 @@ Non-functional testing
 • Security Testing
 
 
+`Acceptance Testing`:
+• UAT (User Acceptance Testing)
+• Determine whether software meets acceptance criteria 
+
+Focus
+• Evaluate software application against end-user requirements
+• Once finalised, indicates that software can be deployed into prod
+
+
+Who creates tests:
+
+Unit Tests
+• Developers create & execute 
+
+System Tests
+• Software QA engineers
+• Separated from dev team
+
+Integration Tests
+• System integration test engineers 
+
+User Acceptance Tests
+• User representatives
+
+
+## WEEK 015 - Software Testing - Black Box 
+### What is Black Box Testing?
+
+• Also known as functional testing
+• Conducts tests based on functional requirements of system
+• Finds errors based on “external behaviours” eg.
+  —> incorrect/missing functionality
+  —> interface errors
+  —> errors in data structure 
+
+Note: No knowledge of internal software 
+
+RECAP:
+
+`Functional:`
+• Features that the System MUST have (what system must perform)
+• Typically to support business process
+
+Eg. ATM function
+1. ATM validates inserted card
+2. ATM disperses money
+3. ATM alerts staff if low on money
+_Basically front-end stuff (what users “see”)
+
+`NON-Functional:`
+• Constraints that the System MUST meet (expected from system)
+
+Eg. ATM function
+1. System required to support 1000 concurrent users
+2. Must use Oracle database
+_Basically back-end stuff (what users dont “see”)
+
+
+### Test Design Techniques
+
+• Use Case Testing
+• Equivalence Partitioning 
+
+Others
+• Boundary Value Analysis
+• Decision Table Testing
+• State Transition Testing 
+
+
+Test Case:
+• Specifies expected behaviour of system
+
+Includes 
+1. ID
+2. Test Scenario
+3. Input test data
+4. Expected results
+5. Actual results
+
+
+Eg. 
+
+An application has been developed to assist club members on the cost estimation of booking function rooms
+for the forthcoming Lunar New Year party:
+
+Ordinary members may book the 12 seats function room at the rate of $10/hr or the 30 seats function room 
+at the rate of $15/hr. Only Senior members may enjoy a discount of 20% on the rates if the number of hours 
+booked for the 30 seats function room is 4 hours or more
+
+Test Case 1: Ordinary Member Booking 12 Seats Room
+Input: Member type Ordinary Room type: 12 seats, Hours: 3
+Expected Output: Total cost: $30 (3 hours * $10/hr)
+
+Test Case 2: Ordinary Member Booking 30 Seats Room
+Input: Member type: Ordinary, Room type: 30 seats, Hours: 5
+Expected Output: Total cost: $75 (5 hours • $15/hr)
+
+Test Case 3: Senior Member Booking 30 Seats Room (Discount Applicable)
+Input: Member type: Senior, Room type: 30 seats, Hours: 4
+Expected Output: Total cost: $48 (4 hours • $15/hr * 80% discount)
+
+Test Case 4: Senior Member Booking 30 Seats Room (Discount Not Applicable)
+Input: Member type: Senior, Room type: 30 seats, Hours: 3
+Expected Output: Total cost: $45 (3 hours • $15/hr)
+
+Test Case 5: Senior Member Booking 12 Seats Room
+Input: Member type: Senior, Room type: 12 seats, Hours: 2
+Expected Output: Total cost: $20 (2 hours * $10/hr, no discount)
+
+
+
+## WEEK 016 - Software Testing - White Box 
+### What is White Box Testing?
+
+• Structural testing 
+• Concerns internal path & structure of program
+• Goal is to cover all possible paths of execution of program
+
+Note: Has knowledge of internal software 
+
+
+              Black Box VS White Box
+
+Functional:
+• Integration Testing     Code Tests (Unit-Testing)
+• System Testing          Regression Testing 
+
+Non-Functional:
+• Performance Testing     Security Testing
+• Accessibility Testing   Penetration Testing
+
+### Path Testing
+
+• Tests cases that will execute every program statement at least once 
+• Helps determine error & bugs 
+
+Cyclomatic Complexity 
+  —> metric to measure complexity of code structure
+
+CC <= 4 : GOOD
+
+CC = 5,6,7 : MEDIUM
+
+CC = 8,9,10 : HIGH
+
+CC > 10 : EXTREME
+
+Steps:
+1. Construct flow graph based on given code
+2. Determine CC of the function
+3. Identify independent execution paths
+4. Design test cases
 
 
 
@@ -1233,7 +1434,13 @@ Non-functional testing
 
 
 
-### V Model of Software Testing in SDLC
 
+
+
+
+Other Types of Test Techniques:
+• Loop Testing
+• Conditional Testing
+• Mutation Testing
 
 
