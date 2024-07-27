@@ -1,9 +1,0 @@
-# DSA notes
-Merge sort is NOT in-place algorithm
-Need know what is in-place algorithm, pros and cons
-What algorimths are stable and unstable
-• stable = bubble, insertion, merge
-• unstable = selection, quick 
-
-Need know quick sort, merge algorithms!!, as well as the appropriate working diagrams
-

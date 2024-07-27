@@ -94,6 +94,10 @@ Prefix
 + - X 5 / * 7 Z V
 
 
+Note: For postfix stacks, do bottom +/- top
+      For prefix stacks, do top +/- bottom
+
+
 Q2. Trace, evaluate postfix expression 25 4 * 20 15 - / 2 / 18 +
 
                15
