@@ -1409,16 +1409,6 @@ Non-Functional:
 • Tests cases that will execute every program statement at least once 
 • Helps determine error & bugs 
 
-Cyclomatic Complexity 
-  —> metric to measure complexity of code structure
-
-CC <= 4 : GOOD
-
-CC = 5,6,7 : MEDIUM
-
-CC = 8,9,10 : HIGH
-
-CC > 10 : EXTREME
 
 Steps:
 1. Construct flow graph based on given code
@@ -1466,14 +1456,16 @@ Where:
 E = no. edges (straight & curved arrows in flow graph)
 n = no. nodes (circles in flow graph)
 
+Cyclomatic Complexity 
+  —> metric to measure complexity of code structure
 
+CC <= 4 : GOOD
 
+CC = 5,6,7 : MEDIUM
 
+CC = 8,9,10 : HIGH
 
-
-
-
-
+CC > 10 : EXTREME
 
 
 Other Types of Test Techniques:
